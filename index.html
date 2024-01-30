@@ -1,0 +1,39 @@
+<head>
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'fc7a1c8b-281a-461f-8245-d27a7164f69b');
+	s.setAttribute('data-domain-uuid', '3b39352d-51e3-48b8-a90a-ec9afc2ddbbd');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script>
+</head>
+
+<body>		
+<!-- Below section is a Form to collect Form Based Consent -->
+<h1>Please Provide Your Consent</h1>
+<form id ="145" action="#" method="post">
+	<label for="Name">Enter Name - </label>
+	<input type="text" name="name" id="name"><br><br>
+	<label for="email">Enter Email - </label>
+	<input type="email" name="email" id="email"><br><br><br>
+	
+	<input type="checkbox" id="Agree" name="Agree" value="Agree">
+        <label for="Agree"> For us to legally enforce your details, users must first agree to our terms and conditions</label><br><br><br>
+
+        <input type="button" id="submit" name="submit" value="SUBMIT" onclick="sendResponse()" /><br><br>
+	
+	<!-- You may style the button by overriding class "cmp-revoke-consent" -->
+
+	
+</form>		
+<input type="button" id="Drop" name="Drop" value="Drop" onclick="setCookie()" /><br><br>
+	
+<script src="Alert.js"></script>
+<script src="Universal.js"></script>	
+</body>
