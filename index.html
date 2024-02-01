@@ -2,7 +2,9 @@
 
 <script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/auto_blocking/fc7a1c8b-281a-461f-8245-d27a7164f69b/efcd8dbd-9ffa-4f65-999e-b4385077678e.js"></script>
 	
-<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+
+<!-- THIS CODE IS FOR TESTING PURPOSE ONLY, DO NOT USE IT IN PRODUCTION. 
+After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
 <script>
 (function () {
 	var s = document.createElement('script');
@@ -10,6 +12,7 @@
 	s.setAttribute('data-tenant-uuid', 'fc7a1c8b-281a-461f-8245-d27a7164f69b');
 	s.setAttribute('data-domain-uuid', 'efcd8dbd-9ffa-4f65-999e-b4385077678e');
 	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.setAttribute('data-securiti-staging-mode', 'true');
 	s.setAttribute('data-skip-css', 'false');
 	s.defer = true;
 	var parent_node = document.head || document.body;
