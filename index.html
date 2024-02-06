@@ -1,5 +1,22 @@
 <head>
 
+<script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/auto_blocking/fc7a1c8b-281a-461f-8245-d27a7164f69b/ee778eec-38bf-4626-b70d-ab6dc186adf3.js"></script>
+
+<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'fc7a1c8b-281a-461f-8245-d27a7164f69b');
+	s.setAttribute('data-domain-uuid', 'ee778eec-38bf-4626-b70d-ab6dc186adf3');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script>
+	
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
