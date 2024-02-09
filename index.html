@@ -35,25 +35,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 	
-<!-- Below section is a Form to collect Form Based Consent -->
-<h1>Please Provide Your Consent</h1>
-<form id ="145" action="#" method="post">
-	<label for="Name">Enter Name - </label>
-	<input type="text" name="name" id="name"><br><br>
-	<label for="email">Enter Email - </label>
-	<input type="email" name="email" id="email"><br><br><br>
-	
-	<input type="checkbox" id="Agree" name="Agree" value="Agree">
-        <label for="Agree"> For us to legally enforce your details, users must first agree to our terms and conditions</label><br><br><br>
 
-        <input type="button" id="submit" name="submit" value="SUBMIT" onclick="sendResponse()" /><br><br>
-	
-	<!-- You may style the button by overriding class "cmp-revoke-consent" -->
 
-	
-</form>		
-<input type="button" id="Drop" name="Drop" value="Drop" onclick="setCookie()" /><br><br>
-	
+<script type="text/javascript">
+            function check()
+            {
+                var searchtext = document.getElementById("q").value;
+                if(searchtext=='')
+                {
+                    alert('Enter any character');
+                    return false;
+                }
+		else
+		{
 <script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
    <script>window.addEventListener('load',
     FormConsentSDK.initialize({
@@ -65,5 +59,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         onConsentFailure: null
     })
 )</script>
+}
+
+			
+            }
+        </script>
+    </head>
+    <body>
+        <form  id ="145" action='search.php' method='GET' onSubmit="return check();">
+            <input type="text" id= "q" name="q" class='textbox' >
+	    <input type="checkbox" id="Agree" name="Agree" value="Agree">
+            <label for="Agree"> For us to legally enforce your details, users must first agree to our terms and conditions</label><br><br><br>
+            <input type="submit" id='submit' value="Search" class ='button' >
+        </form>
 	
 </body>
