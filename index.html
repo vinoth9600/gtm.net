@@ -25,31 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T89KPJ9R');</script>
 <!-- End Google Tag Manager -->
 
-<script type="text/javascript">
-            function check()
-            {
-                var searchtext = document.getElementById("q").value;
-                if(searchtext=='')
-                {
-                    alert('Enter any character');
-                }
-		else
-		{	
-                <script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
-                <script>window.addEventListener('load',
-    		FormConsentSDK.initialize({
-        		codeGenMetadata:{"formPropertyId":"7","formSelector":"[id*=\"30\"]","subjectIdentifiers":[{"name":"q","selector":"[name = \"q\"]","isPrimary":true},{"name":"submit","selector":"[id = \"submit\"]","isPrimary":false}],"consentIdentifiers":[{"type":"checkbox","name":"Agree","selector":"[name = \"Agree\"]","propertyId":43098,"consentValue":"checked"}],"consentTrigger":{"action":"click","selector":"[type=\"submit\"]"}},
-        		url: 'https://app.securiti.ai/privaci/v1/',
-        		authToken:'eb250dbe-3781-4f87-b031-b802f5125913',
-        		orgId:'1',
-        		onConsentSuccess: null,
-        		onConsentFailure: null
-    					})
-						)</script>
-		}			
-            }
-</script>
-	
+
 </head>
 
 
@@ -60,12 +36,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 	
-        <form  id ="30" action='#' method='GET' onSubmit="return check();">
-	    <label for="Name"> Enter Mail - </label>
-            <input type="text" id= "q" name="q" class='textbox' ><br><br>
-		<input type="checkbox" id="Agree" name="Agree" value="Agree">
-        	<label for="Agree"> For us to legally enforce your details, users must first agree to our terms and conditions</label><br><br><br>
-            <input type="submit" id='submit' value="Search" class ='button' >
-        </form>
+<!-- Below section is a Form to collect Form Based Consent -->
+<h1>Please Provide Your Consent</h1>
+<form id ="145" action="#" method="post">
+	<label for="Name">Enter Name - </label>
+	<input type="text" name="name" id="name"><br><br>
+	<label for="email">Enter Email - </label>
+	<input type="email" name="email" id="email"><br><br><br>
+	
+	<input type="checkbox" id="Agree" name="Agree" value="Agree">
+        <label for="Agree"> For us to legally enforce your details, users must first agree to our terms and conditions</label><br><br><br>
+
+        <input type="button" id="submit" name="submit" value="SUBMIT" onclick="sendResponse()" /><br><br>
+	
+	<!-- You may style the button by overriding class "cmp-revoke-consent" -->
+
+	
+</form>	
 	
 </body>
