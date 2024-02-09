@@ -34,11 +34,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     alert('Enter any character');
                     return false;
                 }
-
-             
-             <script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
-             <script>window.addEventListener('load',
-             FormConsentSDK.initialize({
+                else
+		{             
+        	<script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
+             	<script>window.addEventListener('load',
+             	FormConsentSDK.initialize({
         	codeGenMetadata:{"formPropertyId":"6","formSelector":"[id*=\"145\"]","subjectIdentifiers":[{"name":"q","selector":"[name = \"q\"]","isPrimary":true},{"name":"submit","selector":"[id = \"submit\"]","isPrimary":false}],"consentIdentifiers":[{"type":"checkbox","name":"Agree","selector":"[name = \"Agree\"]","propertyId":43096,"consentValue":"checked"}],"consentTrigger":{"action":"click","selector":"[type=\"submit\"]"}},
         	url: 'https://app.securiti.ai/privaci/v1/',
         	authToken:'eb250dbe-3781-4f87-b031-b802f5125913',
@@ -46,10 +46,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         	onConsentSuccess: null,
         	onConsentFailure: null
 		alert('Consent Uploaded');
-    })
-)</script>		    
-            }
-</script>
+    		})
+		)</script>		    
+	        }
+		</script>
 	
 </head>
 
