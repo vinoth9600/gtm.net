@@ -1,4 +1,4 @@
-
+function sendResponse(){
                                 <script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
                                 <script>window.addEventListener('load',
     FormConsentSDK.initialize({
@@ -10,3 +10,4 @@
         onConsentFailure: null
     })
 )</script>
+}
