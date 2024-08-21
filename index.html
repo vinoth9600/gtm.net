@@ -3,26 +3,29 @@
 <h1> Test Code</h1>
 	
 
+
 <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
-<script
-	defer
-	data-strict-csp
-	data-skip-css="false"
-	src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader-strict-csp.js"
-	data-tenant-uuid="fc7a1c8b-281a-461f-8245-d27a7164f69b"
-	data-domain-uuid="c00643f9-4f10-4398-8121-9b70c75e3d43"
-	data-backend-url="https://app.securiti.ai">
-</script>
-const script = document.querySelector('script[data-domain-uuid]')
-script.addEventListener('load', () => {
-  // invoke setConsentBannerParams
-  window.setConsentBannerParams({
-    overrideBannerLanguage: {
-        'https://bankmandiri.co.id/web/guest': 'id’,
-        'https://bankmandiri.co.id/en/': 'en'
-     }
-  })
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'fc7a1c8b-281a-461f-8245-d27a7164f69b');
+	s.setAttribute('data-domain-uuid', 'c00643f9-4f10-4398-8121-9b70c75e3d43');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+  	s.addEventListener('load', function() {
+	window.setConsentBannerParams(
+		{overrideBannerLanguage: {
+        'https://bankmandiri.co.id/web/guest': 'id',
+        'https://bankmandiri.co.id/en/': 'en',
+			 }
 })
+    });
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+
 
 	
 <body>		
