@@ -13,6 +13,16 @@
 	data-domain-uuid="c00643f9-4f10-4398-8121-9b70c75e3d43"
 	data-backend-url="https://app.securiti.ai">
 </script>
+const script = document.querySelector('script[data-domain-uuid]')
+script.addEventListener('load', () => {
+  // invoke setConsentBannerParams
+  window.setConsentBannerParams({
+    overrideBannerLanguage: {
+        'https://bankmandiri.co.id/web/guest': 'id’,
+        'https://bankmandiri.co.id/en/': 'en'
+     }
+  })
+})
 
 	
 <body>		
