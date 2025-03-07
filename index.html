@@ -2,21 +2,14 @@
 
 <h1> Main Page Language Override </h1>
 
-<script>
-(function () {
-    var s = document.createElement('script');
-    s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
-    s.setAttribute('data-tenant-uuid', 'a810e717-da4c-4834-82de-a4533d8d2388');
-    s.setAttribute('data-domain-uuid', '1a8acecc-39cc-4c4c-a459-829e8763e8d5');
-    s.setAttribute('data-backend-url', 'https://app.securiti.ai');
-    s.setAttribute('data-skip-css', 'false');
-    s.setAttribute('data-securiti-staging-mode', 'true');
 
-    s.setAttribute('data-published-version', '1');
-
-    s.defer = true;
-    var parent_node = document.head || document.body;
-    parent_node.appendChild(s);
-
-})()
+<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+<script
+	defer
+	data-strict-csp
+	data-skip-css="false"
+	src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader-strict-csp.js"
+	data-tenant-uuid="fc7a1c8b-281a-461f-8245-d27a7164f69b"
+	data-domain-uuid="893c7633-cbad-45e4-85d0-f948069ea291"
+	data-backend-url="https://app.securiti.ai">
 </script>
